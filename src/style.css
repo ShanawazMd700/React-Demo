@@ -1,0 +1,94 @@
+.logincontainer {
+  width: 100vw;
+  height: 100vh;
+  background: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginbox {
+  width: 700px;
+  height: 350px;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Left Panel */
+.loginleft {
+  width: 50%;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginleft h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 25px;
+}
+
+.inputgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputgroup input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.loginbtn {
+  background: #087724;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.loginbtn:hover {
+  background: #0a5216;
+}
+
+.forgot {
+  margin-top: 15px;
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Right Panel */
+.loginright {
+  width: 50%;
+  background: #15862d;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginright h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.loginright h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
