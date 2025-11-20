@@ -11,12 +11,15 @@ function Dashboard() {
   }
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>Welcome to Dashboard</h1>
-      <p>You successfully logged in!</p>
-      <button className="logoutbtn" onClick={handleLogout}>
-        Logout
-      </button>
+    <div className="dashboard-container">
+      <div className="dashboard-box">
+        <h1>Welcome to Dashboard</h1>
+        <p>You successfully logged in!</p>
+
+        <button className="logoutbtn" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 }
