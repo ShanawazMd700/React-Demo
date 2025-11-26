@@ -10,25 +10,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { ThemeProvider } from "./ThemeContext";
 import ProtectedRoute from "./ProtectedRoute";
+import Layout from "./Layout";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <BrowserRouter>
     <ThemeProvider>
-      <Routes>
-        <Route path="/" element={<App />} />
-        
-        <Route 
-          path="/dashboard" 
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          } 
-        />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<App />} />
 
-      </Routes>
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Layout>
     </ThemeProvider>
   </BrowserRouter>
 );

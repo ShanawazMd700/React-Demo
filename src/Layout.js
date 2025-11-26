@@ -1,18 +1,15 @@
+// Layout.js
 import React from "react";
 import ThemeToggle from "./ThemeToggle";
 import "./toggle.css";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
-    <div className="layout-wrapper">
+    <div>
       {children}
 
-      {/* Fixed theme toggle button */}
-      <div className="theme-toggle-fixed">
-        <ThemeToggle />
-      </div>
+      {/* Theme toggle always visible */}
+      <ThemeToggle />
     </div>
   );
-};
-
-export default Layout;
+}
