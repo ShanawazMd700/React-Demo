@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className="logincontainer">
-      <ThemeToggle />
 
       <div className="loginbox">
         <div className="loginleft">

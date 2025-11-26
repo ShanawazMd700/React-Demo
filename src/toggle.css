@@ -77,3 +77,10 @@ body.light .theme-toggle-btn {
 body.light .theme-toggle-btn:hover {
   background: #e1e1e1;
 }
+
+.theme-toggle-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}

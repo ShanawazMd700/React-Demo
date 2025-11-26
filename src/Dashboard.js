@@ -18,7 +18,6 @@ function Dashboard() {
 
       {/* HEADER */}
       <header className="fd-header">
-        <ThemeToggle /> 
         <h2 className="fd-logo">PASS GEN</h2>
 
         <nav className="fd-menu">

@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// IMPORTANT: import your custom theme provider
 import { ThemeProvider } from "./ThemeContext";
+import ProtectedRoute from "./ProtectedRoute";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,7 +18,16 @@ root.render(
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        
+        <Route 
+          path="/dashboard" 
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } 
+        />
+
       </Routes>
     </ThemeProvider>
   </BrowserRouter>
