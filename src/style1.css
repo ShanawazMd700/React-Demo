@@ -1,15 +1,35 @@
-/* =============== FUTURISTIC DASHBOARD (PASS GEN) =============== */
+/* ===================== THEME VARIABLES ===================== */
+
+body.light {
+  --dash-bg: #f3f4f6;
+  --dash-text: #000000;
+  --dash-text-muted: #4b5563;
+  --dash-card-bg: #ffffff;
+  --dash-highlight: #3f83f8;
+}
+
+body.dark {
+  --dash-bg: #0a0a0a;
+  --dash-text: #ffffff;
+  --dash-text-muted: #ccc;
+  --dash-card-bg: #1a1a1a;
+  --dash-highlight: #3f83f8;
+}
+
+/* ===================== DASHBOARD CONTAINER ===================== */
 
 .futuristic-dashboard {
   width: 100vw;
   height: 100vh;
-  background: #0a0a0a;
-  color: #fff;
+  background: var(--dash-bg);
+  color: var(--dash-text);
   font-family: "Poppins", sans-serif;
   overflow: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* HEADER */
+/* ===================== HEADER ===================== */
+
 .fd-header {
   display: flex;
   justify-content: space-between;
@@ -20,17 +40,18 @@
 .fd-logo {
   font-size: 24px;
   letter-spacing: 6px;
-  color: #fff;
+  color: var(--dash-text);
 }
 
-/* NAV MENU */
+/* ===================== NAV MENU ===================== */
+
 .fd-menu {
   display: flex;
-  gap: 24px; /* spacing between nav items */
+  gap: 24px;
 }
 
 .fd-menu span {
-  color: #bbb;
+  color: var(--dash-text-muted);
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
@@ -38,12 +59,13 @@
 
 .fd-menu .active,
 .fd-menu span:hover {
-  color: #fff;
-  border-bottom: 2px solid #3f83f8; /* underline indicator */
+  color: var(--dash-text);
+  border-bottom: 2px solid var(--dash-highlight);
   padding-bottom: 4px;
 }
 
-/* MAIN CONTENT */
+/* ===================== MAIN CONTENT ===================== */
+
 .fd-hero {
   text-align: left;
   padding: 80px 60px;
@@ -52,21 +74,22 @@
 .fd-title {
   font-size: 60px;
   margin-bottom: 16px;
+  color: var(--dash-text);
 }
 
 .fd-subtitle {
   font-size: 18px;
   max-width: 600px;
-  color: #ccc;
+  color: var(--dash-text-muted);
   margin-bottom: 32px;
 }
 
 .fd-reserve {
   padding: 14px 28px;
   font-size: 18px;
-  color: #3f83f8;
+  color: var(--dash-highlight);
   background: transparent;
-  border: 2px solid #3f83f8;
+  border: 2px solid var(--dash-highlight);
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 48px;
@@ -74,11 +97,12 @@
 }
 
 .fd-reserve:hover {
-  background: #3f83f8;
+  background: var(--dash-highlight);
   color: #000;
 }
 
-/* LOGOUT BUTTON */
+/* ===================== LOGOUT BUTTON ===================== */
+
 .logoutbtn {
   background: crimson;
   padding: 12px 24px;
@@ -95,7 +119,8 @@
   background: #a30017;
 }
 
-/* =============== FADE ANIMATIONS =============== */
+/* ===================== ANIMATIONS ===================== */
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }

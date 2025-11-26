@@ -50,3 +50,30 @@ input:checked + .slider:before {
   background-color: #121212;
   color: white;
 }
+
+.theme-toggle-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #2d2d2d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  background: #444;
+}
+
+body.light .theme-toggle-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+body.light .theme-toggle-btn:hover {
+  background: #e1e1e1;
+}
