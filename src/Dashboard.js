@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./style1.css";
 import { useNavigate } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
+
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ function Dashboard() {
 
       {/* HEADER */}
       <header className="fd-header">
+        <ThemeToggle /> 
         <h2 className="fd-logo">PASS GEN</h2>
 
         <nav className="fd-menu">

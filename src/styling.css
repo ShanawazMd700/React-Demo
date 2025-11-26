@@ -1,7 +1,35 @@
+/* ---------------- GLOBAL DARK/LIGHT SUPPORT ---------------- */
+
+body.light {
+  --bg-main: #ffffff;
+  --bg-sub: #f3f4f6;
+  --text-main: #000000;
+  --text-sub: #4b5563;
+  --panel-left: #ffffff;
+  --panel-right: crimson;   /* You can change this if you want dark mode right panel */
+}
+
+body.dark {
+  --bg-main: #000000;
+  --bg-sub: #111111;
+  --text-main: #ffffff;
+  --text-sub: #cccccc;
+  --panel-left: #1a1a1a;
+  --panel-right: #8b0000;   /* Darker crimson version */
+}
+
+.logincontainer,
+.futuristic-dashboard {
+  background: var(--bg-sub);
+  color: var(--text-main);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* ---------------- LOGIN PAGE ---------------- */
+
 .logincontainer {
   width: 100vw;
   height: 100vh;
-  background: #e5e7eb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,11 +47,12 @@
 /* Left Panel */
 .loginleft {
   width: 50%;
-  background: white;
+  background: var(--panel-left);
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: var(--text-main);
 }
 
 .loginleft h2 {
@@ -32,7 +61,7 @@
 }
 
 .subtitle {
-  color: gray;
+  color: var(--text-sub);
   margin-bottom: 25px;
 }
 
@@ -45,38 +74,30 @@
 .inputgroup input {
   padding: 12px;
   border: 1px solid #ccc;
+  background: var(--bg-main);
+  color: var(--text-main);
   border-radius: 8px;
 }
 
 .loginbtn {
-  background: #087724;
-  color: white;
-  padding: 10px;
+  background: crimson;
+  padding: 12px 24px;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  border: none;
-  transition: 0.3s;
+  transition: background 0.3s;
+  color: #fff;
+  margin-top: 30px;
 }
-.logoutbtn {
-  background: #015c18;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  transition: 0.3s;
-}
-
 
 .loginbtn:hover {
-  background: #0a5216;
+  background: #a30017;
 }
 
 .forgot {
   margin-top: 15px;
-  color: gray;
+  color: var(--text-sub);
   font-size: 14px;
   cursor: pointer;
   text-decoration: underline;
@@ -85,7 +106,7 @@
 /* Right Panel */
 .loginright {
   width: 50%;
-  background: #15862d;
+  background: var(--panel-right);
   color: white;
   padding: 40px;
   text-align: center;
@@ -104,11 +125,12 @@
   font-size: 20px;
 }
 
-/* Dashboard Container */
+/* ---------------- DASHBOARD ---------------- */
+
 .dashboard-container {
   width: 100vw;
   height: 100vh;
-  background: #e5e7eb; /* Same as login page */
+  background: var(--bg-sub);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,11 +138,12 @@
 
 .dashboard-box {
   width: 500px;
-  background: white;
+  background: var(--panel-left);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   text-align: center;
+  color: var(--text-main);
 }
 
 .dashboard-box h1 {
@@ -131,7 +154,6 @@
 
 .dashboard-box p {
   font-size: 16px;
-  color: #333;
+  color: var(--text-sub);
   margin-bottom: 25px;
 }
-/* TESLA Dashboard Styling */

@@ -1,48 +1,35 @@
 import React, { useState } from "react";
 import "./styling.css";
 import { useNavigate } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 function App() {
   const navigate = useNavigate();
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function handleLogin() {
-    const adminUser = "admin";
-    const adminPass = "12345";
-
-    if (username === adminUser && password === adminPass) {
+    if (username === "admin" && password === "12345") {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/dashboard");
     } else {
-      alert("🤬Invalid credentials!");
+      alert("Invalid credentials!");
     }
   }
 
   return (
     <div className="logincontainer">
+      <ThemeToggle />
+
       <div className="loginbox">
         <div className="loginleft">
           <h2>Login</h2>
           <p className="subtitle">Sign in to your account</p>
 
           <div className="inputgroup">
-            <input
-              type="text"
-              placeholder="Username"
-              onChange={(e) => setUsername(e.target.value)}
-            />
-
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-
-            <button className="loginbtn" onClick={handleLogin}>
-              Login
-            </button>
+            <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
+            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+            <button className="loginbtn" onClick={handleLogin}>Login</button>
           </div>
 
           <p className="forgot">Forgot password?</p>
@@ -51,10 +38,7 @@ function App() {
         <div className="loginright">
           <h1>Password Generator</h1>
           <h2>Version1.0</h2>
-          <p>
-            This page will provide new passwords and other solutions for your accounts which
-            makes your web surfing safe and secure.
-          </p>
+          <p>This page will provide new passwords and more ...</p>
         </div>
       </div>
     </div>
