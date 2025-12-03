@@ -37,7 +37,7 @@ function Dashboard() {
             <h1 className="fd-title">Password Generator</h1>
             <p className="fd-subtitle">Create secure, random passwords instantly.</p>
             <div className="btn-group">
-              <button className="fd-reserve">Generate Password</button>
+              <button className="fd-reserve" onClick={() => navigate("/generate")}>Generate Password</button>
             </div>
           </>
         )}
@@ -47,7 +47,7 @@ function Dashboard() {
             <h1 className="fd-title">Saved Passwords</h1>
             <p className="fd-subtitle">Access your locally saved passwords.</p>
             <div className="btn-group">
-              <button className="fd-reserve">View Saved</button>
+              <button className="fd-reserve"onClick={() => navigate("/saved")}>View Saved</button>
             </div>
           </>
         )}
@@ -57,7 +57,7 @@ function Dashboard() {
             <h1 className="fd-title">Strength Checker</h1>
             <p className="fd-subtitle">Test how strong your password is.</p>
             <div className="btn-group">
-              <button className="fd-reserve">Check Strength</button>
+              <button className="fd-reserve"onClick={() => navigate("/strength")}>Check Strength</button>
             </div>
           </>
         )}
@@ -67,7 +67,7 @@ function Dashboard() {
             <h1 className="fd-title">Password History</h1>
             <p className="fd-subtitle">See recently generated passwords.</p>
             <div className="btn-group">
-              <button className="fd-reserve">View History</button>
+              <button className="fd-reserve"onClick={() => navigate("/history")}>View History</button>
             </div>
           </>
         )}
@@ -77,7 +77,7 @@ function Dashboard() {
             <h1 className="fd-title">Settings</h1>
             <p className="fd-subtitle">Manage theme, storage, and security options.</p>
             <div className="btn-group">
-              <button className="fd-reserve">Edit Settings</button>
+              <button className="fd-reserve"onClick={() => navigate("/settings")}>Edit Settings</button>
             </div>
           </>
         )}
